@@ -20,6 +20,9 @@
   /* 2 */
 }
 
+.hide{
+  display:none;
+}
 ::before,
 ::after {
   --tw-content: '';

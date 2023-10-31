@@ -7,9 +7,10 @@
         <!--font awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <script src="../js/script.js"></script>
+        <script src="./js/script.js" defer></script>
         <title>Previsão do Tempo</title>
     </head>
+
     <body class="bg-gradient-to-t from-sky-100 to-sky-600 flex justify-center items-center h-[100vh]">
         <section class="bg-sky-800 shadow-xl rounded-2xl p-8 text-white">
             <div>
@@ -21,33 +22,38 @@
                     </button>
                 </div>
 
-                <div id="weather-data" class="border-t mt-4 pt-4 text-center text-base">
+                <div id="weather-data" class="border-t mt-4 pt-4 text-center text-base hide">
                     <h2 class="flex justify-center items-center mb-2">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span class="m-3 font-bold text-2xl" id="city" >São Paulo</span >
-                        <img src="https://flagsapi.com/BR/flat/64.png" id="country" alt="" class="h-8">
+                        <span class="m-3 font-bold text-2xl" id="city" ></span >
+                        <img src="" id="country" alt="" class="h-8">
                     </h2>
-                    <p id="temperature"><span>25</span>&deg;C</p>
+                    <p id="temperature"><span></span>&deg;C</p>
                     <div id="description-container" class="flex justify-center items-center m-6">
-                        <p id="description" >Nublado</p>
-                        <img src="https://openweathermap.org/img/wn/02n@2x.png" id="weather-icon" class="h-12" alt="">
+                        <p id="description" ></p>
+                        <img src="" id="weather-icon" class="h-12" alt="">
                     </div>
 
                     <div id="details-container" class="flex justify-center items-center">
                         <p id="humidity" class="border-r mx-5 p-3">
                             <i class="fa-solid fa-droplet"></i>
-                            <span class="m-3">48%</span>
+                            <span class="m-3"></span>
                         </p>
                         <p id="wind">
                             <i class="fa-solid fa-wind"></i>
-                            <span class="m-3">3km/h</span>
+                            <span class="m-3"></span>
                         </p>
                     </div>
                 </div>
+
+                <div id="error-message" class="hide">
+                    <p>Não foi possível encontrar o clima de uma cidade com esse nome.</p>
+                </div>
+
+                <div id="loader" class="hide">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
             </div>
         </section>
-
-        <script>
-        </script>
     </body>
 </html>
